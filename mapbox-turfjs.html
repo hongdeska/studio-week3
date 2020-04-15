@@ -132,6 +132,15 @@
 
     map.getCanvas().style.cursor = features.length ? 'pointer' : '';
   });
+  
+  map.addSource('nearest-hospital', {
+    type: 'geojson',
+    data: {
+      type: 'FeatureCollection',
+      features: [
+      ]
+    }
+  });
 
   map.on('click', function(e) {
     // Return any features from the 'libraries' layer whenever the map is clicked
